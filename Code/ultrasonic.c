@@ -42,10 +42,6 @@ ISR(INT1_vect){
     }
   else{
     distance=(timer_counter*256+TCNT0)/933;
-    //lcd_goto_xy(1,0);
-  	//itoa(distance,distance_str,10);
-  	//strcat(distance_str, " cm ");
-  	//lcd_write_word(distance_str);
   	_delay_ms(40);
     timer_counter=0;
     rising_edge=0;
