@@ -25,37 +25,4 @@ void servo_move(int angle)
 	OCR1A=angle;
 }
 
-//void check(void)
-//{
-//	motor_stop();
-//	char done=0;
-//	servo_move(Angle0);
-//	_delay_ms(1000);
-//
-//	if(get_distance()>min_allowed_distance)// cm between the ultrasonic and the object
-//	{
-//		_delay_ms(200);
-//		right();//turn right
-//		done=1;
-//	}
-//	else if(1)
-//	{
-//		servo_move(Angle180);
-//		_delay_ms(1000);
-//		if(get_distance()>min_allowed_distance)// cm between the ultrasonic and the object
-//			{
-//				left();//turn left.
-//				done=1;
-//			}
-//	}
-//
-//
-//	if(done==1)
-//		{
-//			servo_move(Angle90);
-//			move();
-//			done=0;
-//		}
-//	else motor_stop();
-//}
 
