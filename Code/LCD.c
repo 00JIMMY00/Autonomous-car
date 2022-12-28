@@ -4,14 +4,6 @@
  */
 #include "LCD.h"
 
-/*
-*Function name 	: lcd_init
-*Parameters	    : void
-*return		   		: void
-*purpose       	: initialize LCD pins as output
-*				 		and seting up the operation mode(4-bit)
-*						default setting (cursor on)
-*/
 void lcd_init(void)
 {
 
@@ -33,14 +25,7 @@ void lcd_init(void)
 
 }
 
-/*
-*Function name 	: lcd_send_command
-*Parameters	    : uint8_t command
-*return		   		: void
-*purpose       	: sending a command to LCD by sending
-*				 		the first nibble then the second nibble
-*						enabling and disabling the LCD in between
-*/
+
 void lcd_send_command (uint8_t command)
 {
 	DATA_BUS=((command&0b11110000));
@@ -56,13 +41,7 @@ void lcd_send_command (uint8_t command)
 	_delay_ms(5);
 }
 
-/*
-*Function name 	: lcd_write_word
-*Parameters	    : uint8_t word[20]
-*return		   		: void
-*purpose       	: printing a full word to the
-*				 		LCD (Maximun 20 characters)
-*/
+
 void lcd_write_word(uint8_t word[20])
 {
 	int i=0;
@@ -73,14 +52,6 @@ void lcd_write_word(uint8_t word[20])
 	}
 }
 
-/*
-*Function name 	: lcd_write_character
-*Parameters	    : uint8_t character
-*return		   		: void
-*purpose       	: sending one characterto LCD by sending
-*				 		 the first nibble first then the second nibble
-*						 enabling and disabling the LCD in between
-*/
 void lcd_write_character(uint8_t character)
 {
 
@@ -97,13 +68,7 @@ void lcd_write_character(uint8_t character)
 	_delay_ms(5);
 }
 
-/*
-*Function name 	: lcd_clear
-*Parameters	    : void
-*return		   		: void
-*purpose       	: Clearing the lcd screen by sending
-*				 	the LCD_CMD_CLEAR_DISPLAY command to LCD
-*/
+
 void lcd_clear(void)
 {
 	lcd_send_command(LCD_CMD_CLEAR_DISPLAY);
