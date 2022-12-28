@@ -1,8 +1,6 @@
 
 /*
  * LCD.c
- *
- * Author : Hossam Elbahrawy
  */
 #include "LCD.h"
 
